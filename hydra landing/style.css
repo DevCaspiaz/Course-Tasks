@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #302c42;
+    font-family: "Montserrat", sans-serif;
+}
+
+.form-build{
+    width: min(1275px, 90%);
+    margin: 50px auto;
+    border-radius: 100px;
+    background: radial-gradient(circle, #403A5F 50%, #211E2E 100%);
+    padding: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 65px;
+}
+.form-build__heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+.form-build__heading h2{
+    font: 700, 36px, 100%;
+    color: #ffff;
+}
+.form-build__heading h3{
+    font: 300, 36px, 100%;
+    color: #ffff;
+}
+
+.divider-line{
+    width: max(414px, 35%);
+    height: 2px;
+    background: linear-gradient(to right, transparent 0%, #343045 25%, #C0B7E8 45%, #8176AF 65%, #343045 85%, transparent 100%);
+}
+
+
+
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+input, textarea{
+    border: 2px solid #ffff;
+    border-radius: 40px;
+    width: 100%;
+    padding: 20px;
+    font: 400, 14px, 100%;
+    background-color: transparent;
+    outline: none;
+    color: #FFFFFF;
+}
+input::placeholder, textarea::placeholder{
+    color: #FFFFFF;
+}
+.name-surname, .social-address{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+textarea{
+    height: 214px;
+    resize: none;
+}
+button{
+    width: max-content;
+    padding: 15px 30px;
+    color: #343045;
+    background: linear-gradient(to right, #8176AF 20%, #C0B7E8 70%);
+    border-radius: 40px;
+    border: none;
+    align-self: center;
+}
+
+
+@media (max-width: 600px){
+
+    .name-surname, .social-address{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .form-build__heading h2{
+        font: 500, 20px 100%;
+    }
+    .form-build__heading h3{
+        font: 300, 20px 100%;
+        text-align: center;
+    }
+    input, textarea{
+        font: 400, 12px 100%;
+        border: 1px solid #ffff;
+    }
+
+}
